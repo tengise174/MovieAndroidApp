@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.HomeFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="What do you want to watch?"
+        android:textSize="20dp"
+        android:layout_marginTop="40dp"
+        android:padding="10dp"
+        android:textColor="@color/white"/>
+        />
+
+    <!-- Horizontal ScrollView for Top Rated Movies -->
+    <HorizontalScrollView
+        android:id="@+id/topRatedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:id="@+id/topRatedMoviesLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Category Selection (Optional) -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Category Buttons -->
+            <Button
+                android:id="@+id/nowPlayingButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Now Playing"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#333333"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/upcomingButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#333333"
+                android:text="Upcoming"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/topRatedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top Rated"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#333333"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/popularButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Popular"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#333333"
+                android:layout_marginEnd="8dp"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <!-- Static 3x3 GridLayout for Movie Posters -->
+    <GridLayout
+        android:id="@+id/gridLayoutMovies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:alignmentMode="alignMargins"
+        android:padding="8dp"
+        android:layout_marginBottom="16dp">
+    </GridLayout>
+    </ScrollView>
+</LinearLayout>
